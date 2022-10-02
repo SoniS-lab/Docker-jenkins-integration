@@ -3,7 +3,7 @@ pipeline{
 	stages{
 		stage("Pull Latest Image"){
 			steps{
-				bat "docker pull vinsdocker/selenium-docker"
+				bat "docker pull testsms/selenium-docker"
 			}
 		}
 		stage("Start Grid"){
@@ -13,7 +13,7 @@ pipeline{
 		}
 		stage("Run Test"){
 			steps{
-				bat "docker-compose up search-module book-flight-module"
+				bat "docker-compose up bookflight bookflight1"
 			}
 		}
 	}
@@ -25,3 +25,5 @@ pipeline{
 		}
 	}
 }
+
+
