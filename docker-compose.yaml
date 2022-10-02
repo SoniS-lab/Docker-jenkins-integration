@@ -33,7 +33,7 @@ services:
       - chrome
       - firefox
     volumes:
-      - C:\Users\soni.shirwani\IdeaProjects\SeleniumDockerDemo\test-results:/usr/share/udemy/test-output
+      - .\output:/usr/share/udemy/test-output
   bookflight1:
     image: testsms/seleniumdockerdemo
     shm_size: '1g'
