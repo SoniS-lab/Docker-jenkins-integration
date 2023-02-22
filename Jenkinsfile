@@ -19,7 +19,7 @@ pipeline{
 	}
 	post{
 		always{
-			archiveArtifacts artifacts: 'output/**'
+			archiveArtifacts artifacts: 'D:\Docker Tech Talk\Selenium Grid demo\results/**'
 			bat "docker-compose down"
 			bat "rmdir /s /q output "
 		}
