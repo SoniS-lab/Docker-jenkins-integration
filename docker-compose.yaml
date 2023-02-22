@@ -24,18 +24,6 @@ services:
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
       - VNC_NO_PASSWORD=1
-  bookflight:
-    image: testsms/seleniumdockerdemo
-    shm_size: '1g'
-    environment:
-      - HUB_HOST=hub
-      - MODULE=testng.xml
-      - BROWSER=firefox
-    depends_on: 
-      - chrome
-      - firefox
-    volumes:
-      - D:\Docker Tech Talk\Selenium Grid demo\results2:/usr/share/udemy/test-output
   bookflight1:
     image: testsms/seleniumdockerdemo
     shm_size: '1g'
