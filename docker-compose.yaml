@@ -43,6 +43,9 @@ services:
       - HUB_HOST=hub
       - MODULE=testng1.xml
       - VNC_NO_PASSWORD=1
+    depends_on: 
+      - chrome
+      - firefox
     volumes:
       - D:\Docker Tech Talk\Selenium Grid demo\results:/usr/share/udemy/test-output
           
