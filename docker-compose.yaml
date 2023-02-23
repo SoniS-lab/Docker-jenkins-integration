@@ -23,7 +23,7 @@ services:
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
   bookflight:
-    image: testsms/seleniumdockerdemo
+    image: testsms/selenium-docker
     shm_size: '1g'
     environment:
       - HUB_HOST=hub
@@ -35,7 +35,7 @@ services:
     volumes:
       - D:\Docker Tech talk\Docker Seelnium Grid Demo\seleniumdocker\results\test-resultsbookflight:/usr/share/selenium/test-output
   bookflight1:
-    image: testsms/seleniumdockerdemo
+    image: testsms/selenium-docker
     shm_size: '1g'
     environment:
       - HUB_HOST=hub
