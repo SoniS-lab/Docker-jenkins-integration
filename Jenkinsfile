@@ -19,7 +19,7 @@ pipeline{
 	}
 	post{
 		always{
-			archiveArtifacts artifacts: 'D:\Docker Tech talk\Docker Seelnium Grid Demo\seleniumdocker\results'
+			archiveArtifacts artifacts: 'results/**'
 			bat "docker-compose down"
 					}
 	}
