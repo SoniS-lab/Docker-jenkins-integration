@@ -13,7 +13,7 @@ pipeline{
 		}
 		stage("Run Test"){
 			steps{
-				bat "docker-compose up bookflight1"
+				bat "docker-compose up bookflight1 bookflight"
 			}
 		}
 	}
