@@ -11,7 +11,6 @@ services:
       - SE_EVENT_BUS_HOST=hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-      - VNC_NO_PASSWORD=1
     depends_on: 
       - hub
   firefox:
@@ -23,17 +22,24 @@ services:
       - SE_EVENT_BUS_HOST=hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-      - VNC_NO_PASSWORD=1
+  bookflight:
+    image: testsms/seleniumdockerdemo
+    shm_size: '1g'
+    environment:
+      - HUB_HOST=hub
+      - MODULE=testng.xml
+      - BROWSER=firefox
+    depends_on: 
+      - chrome
+      - firefox
+    volumes:
+      - D:\Docker Tech talk\Docker Seelnium Grid Demo\seleniumdocker\test-resultsbookflight:/usr/share/selenium/test-output
   bookflight1:
     image: testsms/seleniumdockerdemo
     shm_size: '1g'
     environment:
       - HUB_HOST=hub
       - MODULE=testng1.xml
-      - VNC_NO_PASSWORD=1
-    depends_on: 
-      - chrome
-      - firefox
     volumes:
-      - D:\Docker Tech Talk\Selenium Grid demo\results:/usr/share/udemy/test-output
+      - D:\Docker Tech talk\Docker Seelnium Grid Demo\seleniumdocker\test-resultsbookflight1:/usr/share/selenium/test-output
           
