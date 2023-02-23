@@ -33,7 +33,7 @@ services:
       - chrome
       - firefox
     volumes:
-      - ./results/test-resultsbookflight:/usr/share/selenium/test-output
+      - D:\Docker Tech talk\Docker Seelnium Grid Demo\seleniumdocker\results\test-resultsbookflight:/usr/share/selenium/test-output
   bookflight1:
     image: testsms/seleniumdockerdemo
     shm_size: '1g'
@@ -41,5 +41,5 @@ services:
       - HUB_HOST=hub
       - MODULE=testng1.xml
     volumes:
-      - ./results/test-resultsbookflight1:/usr/share/selenium/test-output
+      - D:\Docker Tech talk\Docker Seelnium Grid Demo\seleniumdocker\results\test-resultsbookflight1:/usr/share/selenium/test-output
           
